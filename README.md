@@ -4,7 +4,7 @@ Tools to track time, tasks, and projects in XML, and generate Markdown reports o
 
 ## Available Reports
 
-* Weekly report (in development) generates a Markdown file per week, giving a list of narratives per task for the week, nested under larger project headings where applicable. _FTE / time calculations portion needs additional work._
+* Weekly report `report_weekly.xsl` (in development) generates a Markdown file per week, giving a list of narratives per task for the week, nested under larger project headings where applicable. _FTE / time calculations portion needs additional work._
     * e.g. `java -jar saxon.jar -s:timetracking.xml -xsl:report_weekly.xsl monday=2022-08-15`
 * Daily Report `report_daily.xsl` prints to the terminal, giving a list of task names for all tasks for the day specified.
     * e.g. `java -jar saxon.jar -s:timetracking.xml -xsl:report_daily.xsl day=2022-08-17`
