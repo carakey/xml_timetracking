@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?><work xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="timetracking.xsd">
+    <year calendar="2022" fiscal="2023">
+        <quarter id="Summer">
+  
+            <week monday="2022-08-01">
+                <task is_meeting="true">
+                    <task_name>Daily standup meeting</task_name>
+                    <description>
+                        <platform id="OD"/>
+                        <project>OD2 Migration</project>
+                        <pd_area>Repositories</pd_area>
+                    </description>
+                    <tracking>
+                        <time date="2022-07-29">
+                            <start>09:00:00</start>
+                            <end>09:10:00</end>
+                        </time>
+                        <time date="2022-08-01">
+                            <start>09:00:00</start>
+                            <end>09:10:00</end>
+                        </time>
+                        <time date="2022-08-02">
+                            <start>09:00:00</start>
+                            <end>09:10:00</end>
+                        </time>
+                        <time date="2022-08-03">
+                            <start>09:00:00</start>
+                            <end>09:10:00</end>
+                        </time>
+                        <time date="2022-08-04">
+                            <start>09:00:00</start>
+                            <end>09:10:00</end>
+                        </time>
+                    </tracking>
+                    <reporting>
+                        <reporting_level value="quarterly"/>
+                        <narrative>I attended regular OD2 daily standup meetings.</narrative>
+                    </reporting>
+                </task>
+                <task is_meeting="true">
+                    <task_name>Metadata Team meeting</task_name>
+                    <description>
+                        <platform id="OD"/>
+                        <project>OD2 Migration</project>
+                        <pd_area>Repositories</pd_area>
+                    </description>
+                    <tracking>
+                        <time date="2022-08-02">
+                            <start>13:00:00</start>
+                            <end>14:00:00</end>
+                        </time>
+                        <time date="2022-08-04">
+                            <start>13:00:00</start>
+                            <end>14:00:00</end>
+                        </time>
+                    </tracking>
+                    <reporting>
+                        <reporting_level value="quarterly"/>
+                        <narrative>I attended regular OD2 Metadata Team meetings.</narrative>
+                    </reporting>
+                </task>
+                <task>
+                    <task_name>Migration QA for Pacific Northwest Stream Survey Collection</task_name>
+                    <description>
+                        <platform id="OD"/>
+                        <project>OD2 Migration</project>
+                        <pd_area>Repositories</pd_area>
+                        <reference>
+                            <label>Github ticket</label>
+                            <link>https://github.com/OregonDigital/OD2-migration/issues/216</link>
+                        </reference>
+                    </description>
+                    <tracking>
+                        <time date="2022-08-04">
+                            <start>16:00:00</start>
+                            <end>16:15:00</end>
+                        </time>
+                    </tracking>
+                    <reporting>
+                        <reporting_level value="weekly"/>
+                        <narrative>I worked on migration QA for the Pacific Northwest Stream Survey Collection, but found that the collection still needed labels fetched before proceeding.</narrative>
+                    </reporting>
+                </task>
+                <task>
+                    <task_name>Pacific Northwest Stream Survey Metadata Remediation</task_name>
+                    <description>
+                        <platform id="OD"/>
+                        <project>OD2 Metadata Remediation</project>
+                        <pd_area>Metadata</pd_area>
+                        <pd_subarea>Remediation</pd_subarea>
+                    </description>
+                    <tracking/>                    
+                    <reporting>
+                        <reporting_level value="quarterly"/>
+                        <narrative>I cleaned up problematic name URIs in the Pacific Northwest Stream Survey collection: Several Opaque Namespace URIs that were found in collection records did not exist in ONS.</narrative>
+                        <data>
+                            <label>New Opaque Namespace terms</label>
+                            <quantity>4</quantity>
+                        </data>
+                        <data>
+                            <label>OD1 Records Manually Edited</label>
+                            <quantity>13</quantity>
+                        </data>
+                    </reporting>
+                </task>
+                <task is_meeting="true">
+                    <task_name>Lundeen Committee Application Review</task_name>
+                    <description>
+                        <project>Lundeen Award Committee</project>
+                        <pd_area>Service</pd_area>
+                        <pd_subarea>Library Service</pd_subarea>
+                    </description>
+                    <tracking>
+                        <time date="2022-08-02">
+                            <start>14:00:00</start>
+                            <end>14:30:00</end>
+                        </time>
+                    </tracking>
+                    <reporting>
+                        <reporting_level value="quarterly"/>
+                        <narrative>The Lundeen Award Committee met to review a proposal, and approved funds for the project. Following the meeting, I emailed the Dean to confirm.</narrative>
+                    </reporting>
+                </task>
+                <task>
+                    <task_name>Lundeen Committee Form Update</task_name>
+                    <description>
+                        <project>Lundeen Award Committee</project>
+                        <pd_area>Service</pd_area>
+                        <pd_subarea>Library Service</pd_subarea>
+                    </description>
+                    <tracking>
+                        <time date="2022-08-02">
+                            <start>14:30:00</start>
+                            <end>14:45:00</end>
+                        </time>
+                    </tracking>
+                    <reporting>
+                        <reporting_level value="quarterly"/>
+                        <narrative>I made changes to the Lundeen Award application form based on committee discussions about special reviews.</narrative>
+                    </reporting>
+                </task>
+            </week>
+            <week monday="2022-08-15">
+                <task is_meeting="true">
+                    <task_name>Daily standup meeting</task_name>
+                    <description>
+                        <platform id="OD"/>
+                        <project>OD2 Migration</project>
+                        <pd_area>Repositories</pd_area>
+                    </description>
+                    <tracking>
+                        <time date="2022-08-12">
+                            <start>09:00:00</start>
+                            <end>09:10:00</end>
+                        </time>
+                        <time date="2022-08-15">
+                            <start>09:00:00</start>
+                            <end>09:10:00</end>
+                        </time>
+                        <time date="2022-08-16">
+                            <start>09:00:00</start>
+                            <end>09:10:00</end>
+                        </time>
+                        <time date="2022-08-17">
+                            <start>09:00:00</start>
+                            <end>09:10:00</end>
+                        </time>
+                    </tracking>
+                    <reporting>
+                        <reporting_level value="quarterly"/>
+                        <narrative>I attended regular OD2 daily standup meetings.</narrative>
+                    </reporting>
+                </task>
+                <task is_meeting="true">
+                    <task_name>Metadata Team meeting</task_name>
+                    <description>
+                        <platform id="OD"/>
+                        <project>OD2 Migration</project>
+                        <pd_area>Repositories</pd_area>
+                    </description>
+                    <tracking>
+                        <time date="2022-08-16">
+                            <start>13:00:00</start>
+                            <end>13:30:00</end>
+                        </time>
+                    </tracking>
+                    <reporting>
+                        <reporting_level value="quarterly"/>
+                        <narrative>I attended regular OD2 Metadata Team meetings.</narrative>
+                    </reporting>
+                </task>
+                <task is_meeting="true">
+                    <task_name>Admin Briefing</task_name>
+                    <description>
+                        <pd_area>Admin</pd_area>
+                    </description>
+                    <tracking>
+                        <time date="2022-08-12">
+                            <start>09:30:00</start>
+                            <end>10:15:00</end>
+                        </time>
+                    </tracking>
+                    <reporting>
+                        <reporting_level value="weekly"/>
+                        <narrative>I attended the Library Admin briefing.</narrative>
+                    </reporting>
+                </task>
+                <task>
+                    <task_name>Identify OSU researchers</task_name>
+                    <description>
+                        <project>Datasets in IRs</project>
+                        <pd_area>Scholarship</pd_area>
+                        <pd_subarea>Articles</pd_subarea>
+                    </description>
+                    <tracking>
+                        <time date="2022-08-12">
+                            <start>16:00:00</start>
+                            <end>18:45:00</end>
+                        </time>
+                        <time date="2022-08-15">
+                            <start>15:30:00</start>
+                            <end>17:30:00</end>
+                        </time>
+                        <time date="2022-08-16">
+                            <start>10:00:00</start>
+                            <end>11:30:00</end>
+                        </time>
+                        <time date="2022-08-16">
+                            <start>12:00:00</start>
+                            <end>13:00:00</end>
+                        </time>
+                    </tracking>
+                    <reporting>
+                        <reporting_level value="weekly"/>
+                        <narrative>I worked on querying data repositories to identify OSU researchers for the 'datasets in IRs' research project.</narrative>
+                    </reporting>
+                </task>
+            </week>
+        </quarter>
+    </year>
+    
+</work>
