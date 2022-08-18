@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="https://www.w3schools.com"
+    elementFormDefault="qualified">
+
+    <xs:element name="work">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="year" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="quarter" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <xs:element name="week" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+
+                                                  <xs:element name="task" maxOccurs="unbounded">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+
+                                                  <xs:element name="task_name" type="xs:string">
+                                                  <xs:annotation>
+                                                  <xs:documentation>Provide a name for this discrete
+                                                  task.</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+
+                                                  <xs:element name="description">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+
+                                                  <xs:element name="platform" minOccurs="0"
+                                                  maxOccurs="unbounded">
+                                                  <xs:annotation>
+                                                  <xs:documentation>Record the software platform(s)
+                                                  involved in this task.</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:complexType>
+
+                                                  <xs:attribute name="id" use="required">
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="OD"/>
+                                                  <xs:enumeration value="SA"/>
+                                                  <xs:enumeration value="OJS"/>
+                                                  <xs:enumeration value="Canvas"/>
+                                                  <xs:enumeration value="other"/>
+                                                  <xs:enumeration value="n/a"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:attribute>
+
+                                                  </xs:complexType>
+                                                  </xs:element>
+
+                                                  <xs:element name="project" type="xs:string"
+                                                  minOccurs="0" maxOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation>Use to refer to the larger
+                                                  project this task is a part of.</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+
+                                                  <xs:element name="pd_area">
+                                                  <xs:annotation>
+                                                  <xs:documentation>Use to sort a task into a major
+                                                  area of responsibility per position description.
+                                                  Only one permitted, for purposes of
+                                                  reporting.</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="Repositories"/>
+                                                  <xs:enumeration value="Metadata"/>
+                                                  <xs:enumeration value="Digital Publishing"/>
+                                                  <xs:enumeration value="Scholarship"/>
+                                                  <xs:enumeration value="Service"/>
+                                                  <xs:enumeration value="Instruction"/>
+                                                  <xs:enumeration value="Professional Development"/>
+                                                  <xs:enumeration value="Admin"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+
+                                                  <xs:element name="pd_subarea" type="xs:string"
+                                                  minOccurs="0" maxOccurs="unbounded">
+                                                  <xs:annotation>
+                                                  <xs:documentation>Use to sort a task into a
+                                                  narrower category within a PD area. Useful for
+                                                  reporting.</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+
+                                                  <xs:element name="reference" minOccurs="0"
+                                                  maxOccurs="unbounded">
+                                                  <xs:annotation>
+                                                  <xs:documentation>Provide a link or other
+                                                  reference to a related ticket, document, etc.
+                                                  Provide a label for each reference and a link or
+                                                  path to the document if
+                                                  appropriate.</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+
+                                                  <xs:element name="label" type="xs:string"/>
+                                                  <xs:element name="link" type="xs:string"
+                                                  minOccurs="0"/>
+                                                  <xs:element name="path" type="xs:string"
+                                                  minOccurs="0"/>
+
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+
+                                                  <xs:element name="tracking">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+
+                                                  <xs:element name="time" minOccurs="0"
+                                                  maxOccurs="unbounded">
+                                                  <xs:complexType>
+                                                  <xs:annotation>
+                                                  <xs:documentation>Use to track the amount of time
+                                                  spent on a task. Useful for balancing
+                                                  FTE.</xs:documentation>
+                                                  <xs:documentation>Repeat 'time' and its
+                                                  subelements when working on the same task within
+                                                  the same week.</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:sequence>
+
+                                                  <xs:element name="start" type="xs:time"/>
+                                                  <xs:element name="end" type="xs:time"/>
+
+                                                  </xs:sequence>
+
+                                                  <xs:attribute name="date" type="xs:date"
+                                                  use="required"/>
+
+                                                  </xs:complexType>
+                                                  </xs:element>
+
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+
+                                                  <xs:element name="reporting">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+
+                                                  <xs:element name="reporting_level">
+                                                  <xs:complexType>
+                                                  <xs:annotation>
+                                                  <xs:documentation>Use to record the highest level
+                                                  of reports the task should be included
+                                                  in.</xs:documentation>
+                                                  </xs:annotation>
+
+                                                  <xs:attribute name="value">
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="weekly"/>
+                                                  <xs:enumeration value="quarterly"/>
+                                                  <xs:enumeration value="annual"/>
+                                                  <xs:enumeration value="dossier"/>
+                                                  <xs:enumeration value="none"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:attribute>
+
+                                                  </xs:complexType>
+                                                  </xs:element>
+
+                                                  <xs:element name="narrative" type="xs:string"
+                                                  minOccurs="0" maxOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation>Record a text blurb for use in
+                                                  reports.</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+
+                                                  <xs:element name="data" minOccurs="0"
+                                                  maxOccurs="unbounded">
+                                                  <xs:annotation>
+                                                  <xs:documentation>Use to quantify a task. Provide
+                                                  a label and a value for each data
+                                                  point.</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+
+                                                  <xs:element name="label" type="xs:string"/>
+                                                  <xs:element name="quantity" type="xs:integer"/>
+
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+
+                                                  <xs:element name="citation" type="xs:string"
+                                                  minOccurs="0" maxOccurs="unbounded">
+                                                  <xs:annotation>
+                                                  <xs:documentation>Use for a formal citation of an
+                                                  article of scholarship produced or event
+                                                  attended.</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+
+                                                  </xs:sequence>
+
+                                                  <xs:attribute name="special" use="optional">
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="edi"/>
+                                                  <xs:enumeration value="tenure"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:attribute>
+
+                                                  <xs:attribute name="is_meeting" type="xs:boolean"
+                                                  default="false" use="optional"/>
+
+                                                  </xs:complexType>
+                                                  </xs:element>
+
+                                                </xs:sequence>
+
+                                                <xs:attribute name="monday" type="xs:date"
+                                                  use="required"/>
+
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                    </xs:sequence>
+                                    
+                                    <xs:attribute name="id" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Winter"/>
+                                                <!-- Jan/Feb/Mar -->
+                                                <xs:enumeration value="Spring"/>
+                                                <!-- Apr/May/Jun -->
+                                                <xs:enumeration value="Summer"/>
+                                                <!-- Jul/Aug/Sep -->
+                                                <xs:enumeration value="Fall"/>
+                                                <!-- Oct/Nov/Dec -->
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+
+                        <xs:attribute name="calendar" type="xs:integer" use="required"/>
+                        <xs:attribute name="fiscal" type="xs:integer" use="required"/>
+
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
